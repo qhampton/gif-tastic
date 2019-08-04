@@ -58,7 +58,7 @@ function displayResult(query) {
         })
         // After data comes back from the request
         .then(function (response) {
-            console.log(queryURL);
+            console.log(query);
             console.log(response);
             // storing the data from the AJAX request in the results variable
             var results = response.data;
@@ -68,17 +68,14 @@ function displayResult(query) {
 
                 // Creating and storing a div tag and class
                 var resultDiv = $("<div>");
-                resultImg.addClass("gif");
-                // Creating a paragraph tag with the result item's rating
-                var p = $("<p>").text("Rating: " + results[i].rating);
 
                 // Creating and storing an image tag
                 var resultImg = $("<img>");
+                resultImg.addClass("gif");
                 // Setting the src attribute of the image to a property pulled off the result item
                 resultImg.attr("src", results[i].images.fixed_height.url);
 
-                // Appending the paragraph and image tag to the resultDiv
-                resultDiv.append(p);
+                // Appending the image tag to the resultDiv
                 resultDiv.append(resultImg);
 
                 // Prependng the resultDiv to the HTML page in the "#gif-here" div

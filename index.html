@@ -2,45 +2,47 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<!--Links to libraries being used-->
-<!--Bootstrap CSS-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!--Google Fonts-->
+    <meta charset="utf-8">
+    <!--Links to libraries being used-->
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Google Fonts-->
 
-<!--CSS File-->
-<link rel="stylesheet" href="assets/css/style.css">
+    <!--CSS File-->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-<title>Gif-tastic</title>
+    <title>Gif-tastic</title>
 </head>
+
 <body>
     <!--header-->
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">What the Gif?!</h1>
-            <p class="lead">A picture is worth a thousands words. So a moving one must be worth millions! Who needs long paragraphs when you can say how you feel with one image. </p>
+            <p class="lead">A picture is worth a thousands words. So a moving one must be worth millions! Who needs long
+                paragraphs when you can say how you feel with one image. </p>
         </div>
     </div>
     <div class="container">
-            <!--Buttons to be displayed upon submitting-->
-            <div class="row">
-                <div class="col-xs-12" id="gif-buttons"></div>
-            </div>
-            <div class="row">
+        <!--Buttons to be displayed upon submitting-->
+        <div class="row">
+            <div class="col-xs-12" id="gif-buttons"></div>
+        </div>
+        <br>
+        <div class="row">
+            <!--search form-->
+            <input type="text" class="form-control" id="userSearch" placeholder="What do you need?"><br>
 
+            <!--search button-->
+            <div class="col-md-offset-10 col-md-2">
+                <button type="submit" class="btn btn-primary" id='search-button'>Search</button>
                 <!--where gifs will display-->
                 <div class="col-md-8" id="gif-here"></div>
                 <div class="col-md-4">
-
-                    <!--search form-->
-                    <input type="text" class="form-control" id= "userSearch" placeholder="What do you need?"><br>
-
-                    <!--search button-->
-                    <div class="col-md-offset-10 col-md-2">
-                        <button type="submit" class="btn btn-primary" id='search-button'>Search</button> 
-                    </div>
                 </div>
-    </div>
+            </div>
+        </div>
 </body>
 <!--ajax-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -48,4 +50,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--JS File-->
 <script src="assets/js/app.js"></script>
+
 </html>
