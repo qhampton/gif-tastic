@@ -69,7 +69,7 @@ function displayResult(query) {
             for (var i = 0; i < results.length; i++) {
 
                 // Creating and storing a div tag and class
-                var resultDiv = $("<div>");
+                var resultDiv = $("<div class='float-sm-left'>");
                 //creating a p tag to place title in
                 var title = $("<p>").text("Rating: " + results[i].title);
                 // Creating and storing an image tag
