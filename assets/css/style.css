@@ -1,6 +1,9 @@
 /*styling of jumbotron*/
-.jumbotron jumbotron-fluid{
-
+.jumbotron{
+   background-image: url(https://media1.giphy.com/media/U6Fxnc2jTlBh2GKCTU/giphy.gif); 
+   color: whitesmoke;
+   font-weight: bolder;
+   font-family: 'Abril Fatface', cursive;
 }
 
 /*fonts*/
