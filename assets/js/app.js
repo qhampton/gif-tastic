@@ -70,10 +70,13 @@ function displayResult(query) {
 
                 // Creating and storing a div tag and class
                 var resultDiv = $("<div>");
-
+                //creating a p tag to place title in
+                var title = $("<p>").text("Rating: " + results[i].title);
                 // Creating and storing an image tag
                 var resultImg = $("<img>");
                 resultImg.addClass("gif");
+                 // Creating a paragraph tag with the result item's rating	
+                 var p = $("<p>").text("Rating: " + results[i].rating);
                 // Setting the src attribute of the image to a property pulled off the result item
                 resultImg.attr('data-state',"still");
                 resultImg.attr("src", results[i].images.fixed_height.url);
@@ -84,7 +87,9 @@ function displayResult(query) {
                 resultDiv.append(resultImg);
 
                 // Prependng the resultDiv to the HTML page in the "#gif-here" div
+                resultDiv.prepend(title);
                 $("#gif-here").prepend(resultDiv);
+                resultDiv.append(p);
             }
         })
 };
