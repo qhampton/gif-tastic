@@ -35,7 +35,8 @@ function buttonGif(){
         //adds input as the button name
         button.text(gifs[i]);
         //puts button in gif area
-        $("#gif-buttons").append(button + "<br>");
+        $("#gif-buttons").append(button);
+        $("#gif-buttons").append("<br/>");
     }}
 
 //gif button is clicked
@@ -44,7 +45,7 @@ $(document).on("click", ".button-gif", function () {
     var foundGif = $(this).attr("data-foundGif");
 
     // Constructing a queryURL using the foundGif name
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + foundGif + "&api_key=kGhqrzqqqb78foMAWMLfjsOQ7CXPnFXA";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ foundGif+"&api_key=kGhqrzqqqb78foMAWMLfjsOQ7CXPnFXA";
     displayResult(queryURL);
 });
 
@@ -52,7 +53,7 @@ $(document).on("click", ".button-gif", function () {
 function displayResult(query) {
     // Performing an AJAX request with the queryURL
     $.ajax({
-            url: queryURL,
+            url: query,
             method: "GET"
         })
         // After data comes back from the request
