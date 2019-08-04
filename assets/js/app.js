@@ -31,7 +31,7 @@ function buttonGif(){
         //adds attribute of input
         button.attr("data-name", gifs[i]);
         //adds class to button for later use
-        button.addClass("button-gif");
+        button.addClass("button-gif").addClass("btn btn-outline-warning");
         //adds input as the button name
         button.text(gifs[i]);
         //puts button in gif area
@@ -75,7 +75,10 @@ function displayResult(query) {
                 var resultImg = $("<img>");
                 resultImg.addClass("gif");
                 // Setting the src attribute of the image to a property pulled off the result item
+                resultImg.attr('data-state',"still");
                 resultImg.attr("src", results[i].images.fixed_height.url);
+                resultImg.attr('data-still',results[i].images.fixed_height_still.url);
+                resultImg.attr('data-animate',results[i].images.fixed_height.url);
 
                 // Appending the image tag to the resultDiv
                 resultDiv.append(resultImg);
