@@ -1,6 +1,6 @@
 //page variables
 var gifs = [];
-//DOM eleemtns
+//DOM elements
 var searchInput = $("#userSearch");
 
 //search input brings gifs and stores in array 
@@ -11,10 +11,11 @@ $("#search-button").on("click", function (a) {
     if (searchInput.val().trim() === "") {
         return;
     } 
-    //if input put in arrsy
+    //if input put in array
     else {
         gifs.push(searchInput.val().trim());
     }
+    searchInput.val("");
     console.log(gifs);
     //makes a button
     buttonGif();
