@@ -37,12 +37,14 @@ function buttonGif(){
         //puts button in gif area
         $("#gif-buttons").append(button);
         $("#gif-buttons").append("<br/>");
+        //clear buttons so no doubles
+        gifs=[];
     }}
 
 //gif button is clicked
 $(document).on("click", ".button-gif", function () {
     // Grabbing and storing the data-foundGif property value from the button
-    var foundGif = $(this).attr("data-foundGif");
+    var foundGif = $(this).attr("data-name");
 
     // Constructing a queryURL using the foundGif name
     var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ foundGif+"&api_key=kGhqrzqqqb78foMAWMLfjsOQ7CXPnFXA";
